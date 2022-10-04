@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Josefin+Sans:wght@100;200;400&family=Outfit:wght@200;300&family=Poppins:wght@200;300;400;600&family=Square+Peg&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    background-color: #ffffff;
+}
+:root{
+    --main-color:#41150E;
+    --secondary-color:#B35714;
+    --light-color:#F9F9F9;
+}
+
+header{
+padding: 5px 18%;
+top: 0;left: 0;right: 0;
+position: fixed;
+z-index: 1000;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #ffffff;
+border-bottom: 2px solid whitesmoke;
+}
+header a img{
+    width: 120px;
+}
+header ul{
+    display: flex;
+    align-items: center;
+}
+header ul li {
+    padding: 0 20px;
+}
+header ul li a{
+    font-size: 21px;
+    color: black; 
+}
+header ul li a:hover{
+border-bottom: 2px solid var(--secondary-color);
+  color: var(--main-color);
+}
+.burger{
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+    transition: .2s;
+}
+section{
+    padding: 100px 18%;
+}
+.hero{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    align-items: center;
+    grid-gap: 15rem;
+    width: 100%;
+    height: auto;
+}
+.hero .line{
+    height: 3px;
+    width: 100px;
+    border-radius: 5px;
+   background-color: var(--main-color);
+   margin-bottom: 30px;
+}
+.hero .hero-text h1{
+font-size: 45px;
+margin-bottom: 10px;
+white-space: nowrap;
+}
+.hero .hero-text p{
+    font-size: 25px;
+}
+.hero .hero-img img{
+    width: 550px;
+    max-width: 100%;
+    height: auto;
+    animation-name: change;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes change{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+.proof{
+   padding: 60px 0;
+   width: 100%;
+   height: auto;
+   background-color: var(--light-color);
+   display: flex;
+   justify-content: space-evenly;
+   overflow-x: hidden;
+}
+.proof .proof-text{
+    text-align: center;
+}
+.proof .proof-text h1{
+color: var(--secondary-color);
+font-size: 35px;
+}
+.proof .proof-text p{
+    font-size: 25px;
+}
+ .center-text{
+    text-align: center;
+    font-size: 30px;
+}
+.feature{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+.feature .feature-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    grid-gap: 5rem;
+}
+.sticky{
+    border-bottom: 2px solid whitesmoke;
+}
+.testimonial{
+    width: 100%;
+    height: auto;
+}
+.testimonial .test-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    align-items: center;
+    grid-gap: 3rem;
+    margin-top: 50px;
+}
+.testimonial .test-container .test-box{
+    background-color: var(--light-color);
+    padding: 30px;
+}
+.testimonial .test-container .test-box p{
+    font-size: 20px;
+    text-align: justify;
+    letter-spacing: 0.1px;
+    margin-bottom: 30px;
+}
+.testimonial .test-container .test-box i{
+    color: var(--secondary-color);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.testimonial .test-container .test-box .img-title{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+.testimonial .test-container .test-box{
+    border-bottom: 2px solid var(--main-color);
+}
+.testimonial .test-container .test-box .img-title img{
+    width: 80px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    padding: 5px;
+}
+.pro-center{
+    margin-top: -100px;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    align-items: center;
+    grid-gap: 3rem;
+    margin-top: 30px;
+}
+.product-container .product-box img{
+    background-color: var(--light-color);
+    padding: 50px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+}
+.product-container .product-box h2{
+    font-size: 27px;
+    margin: 10px 0;
+}
+.product-container .product-box p{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.product-container .product-box a{
+    color: #0047FF;
+    font-size: 20px;
+}
+footer{
+    background-color: var(--main-color);
+    height: 200px;
+    text-align: center;
+    width: 100%;
+}
+footer .social i{
+    color: white;
+    margin-top: 80px;
+    
+   margin-bottom: 10px;
+
+}
+footer p{
+    color: white;
+}
+/* about page css starts here */
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    grid-gap: 3rem;
+}
+.about-text{
+    text-align: left;
+}
+.about-text .abt{
+    text-align: left;
+    margin-bottom: 10px;
+}
+.about .about-text p{
+    text-align: justify;
+    font-size: 20px;
+    margin-top: -10px;
+}
+.about .line{
+    height: 3px;
+    width: 100px;
+    border-radius: 5px;
+   background-color: whitesmoke;
+   margin-bottom: 20px;
+}
+.about .about-img img{
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    animation-name: rotate;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(36deg);
+    }
+}
+.team{
+    margin-top: -100px;
+    width: 100%;
+    height: auto; 
+}
+.team .team-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    grid-gap: 5rem;
+}
+.team .team-container .team-box{
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    background-color: var(--light-color);
+    border-radius: 10px;
+}
+.team .team-container .team-box img{
+    width: 100px;
+    transform: translateY(-60px);
+}
+.team .team-container .team-box h1{
+    transform: translateY(-50px);
+}
+.team .team-container .team-box p{
+    transform: translateY(-50px);
+}
+.active{
+    color: var(--secondary-color);
+}
+/* contact page css starts here */
+.contact{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contact .contact-form input{
+    border: 2px solid var(--secondary-color);
+    padding: 10px;
+    width: 400px;
+    font-size: 20px;
+    color: black;
+    border-radius: 5px;
+}
+.contact .contact-form .center-text{
+    margin-bottom: 20px;
+}
+.contact .contact-form textarea{
+    border: 2px solid var(--secondary-color);
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+    border-radius: 5px;
+}
+.contact .utilities img{
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    transform: translateY(20px);
+}
+.contact .contact-form .btn{
+    background-color: var(--main-color);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.map{
+    width: 100%;
+    height: auto;
+}
+@media screen and (max-width:1850px) {
+   header{
+    padding: 5px 15%;
+   }
+   section{
+    padding: 100px 15%;
+   }
+}
+@media screen and (max-width:1700px){
+    .hero{
+        grid-gap: 8rem;
+    }
+    .map iframe{
+        max-width: 100%;
+        height: 500px;
+    }
+}
+@media screen and (max-width:1530px){
+    header{
+        padding: 5px 10%;
+       }
+       section{
+        padding: 100px 10%;
+       }
+       .hero{
+        grid-gap: 10rem;
+    }
+}
+@media screen and (max-width:1380px){
+    .hero{
+        grid-gap: 5rem;
+    }
+}
+@media screen and (max-width:1380px){
+       header{
+        padding: 5px 5%;
+       }
+       section{
+        padding: 100px 5%;
+       }
+       .hero{
+        grid-gap: 10rem;
+    }
+}
+@media screen and (max-width:1250px){
+    .hero{
+        grid-gap: 5rem;
+    }
+}
+@media screen and (max-width:1200px){
+    .hero .hero-text h1{
+        font-size: 30px;
+        }
+        .hero .hero-text p{
+            font-size: 20px;
+        }
+        .hero{
+            grid-gap: 15rem;
+        }
+}
+@media screen and (max-width:1050px){
+    .hero{
+        grid-gap: 5rem;
+    }
+}
+@media screen and (max-width:850px){
+    header{
+        padding: 5px 3%;
+       }
+       section{
+        padding: 100px 3%;
+       }
+       .contact{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        grid-gap: 5rem;
+       }
+}
+@media screen and (max-width:800px){
+    ul{
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: whitesmoke;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        align-items: center;
+        z-index: 1001;
+        transform: translateX(100%);
+        overflow-x: hidden;
+        transition: .2s linear;
+    }
+    .ul-active{
+    transform: translateX(0%);
+    transition: .2s linear;
+    }
+    .burger-active{
+        transform: rotate(360deg);
+        transition: .2s;
+    }
+    .burger{
+        display: block;
+    }
+    
+.hero{
+    grid-template-columns: 1fr;
+    text-align: center; 
+}
+.hero .hero-img img{
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+}
+.line{
+    display: none;
+}
+.hero .hero-text h1{
+    white-space:unset;
+    }
+    .about{
+        grid-template-columns: 1fr;
+        padding: 100px 5%;
+    }
+    .about .center-text{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .about .about-img img{
+        display: none;
+    }
+}
+@media screen and (max-width:500px){
+    .contact .contact-form input{
+        width: 300px;
+    }
+    .contact .contact-form textarea{
+        width: 300px;
+    }
+}
+@media screen and (max-width:400px){
+    .proof .proof-text h1{
+        color: var(--secondary-color);
+        font-size: 25px;
+        }
+        .proof .proof-text p{
+            font-size: 17px;
+        }
+        header{
+            padding: 5px 3%;
+           }
+           section{
+            padding: 100px 3%;
+           }
+           .feature .feature-img img{
+            width: 250px;
+            max-width: 100%;
+            height: auto;
+           }
+           .product-box img{
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+           }
+       
+}
