@@ -515,3 +515,7 @@ footer p{
            }
        
 }
+
+#copy{
+transform: translateY(1px);
+}
